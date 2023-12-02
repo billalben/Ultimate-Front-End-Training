@@ -21,7 +21,7 @@ function htmlTask() {
 
 // scss Task
 function scssTask() {
-  return src(["./app/css/**/*.scss", "./app/css/**/*.css"], {
+  return src(["./app/css/**/*.css", "./app/css/**/*.scss"], {
     sourcemaps: true,
   })
     .pipe(sass().on('error', sass.logError))
