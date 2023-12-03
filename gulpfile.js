@@ -26,7 +26,7 @@ function scssTask() {
   })
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(concat("main.css"))
+    .pipe(concat("main.min.css"))
     .pipe(dest("./dist/css", { sourcemaps: "." }));
 }
 
@@ -34,7 +34,7 @@ function scssTask() {
 function jsTask() {
   return src("./app/js/*.js", { sourcemaps: true })
     .pipe(babel({ presets: ["@babel/preset-env"] }))
-    .pipe(concat("main.js"))
+    .pipe(concat("main.min.js"))
     .pipe(terser())
     .pipe(dest("./dist/js", { sourcemaps: "." }));
 }

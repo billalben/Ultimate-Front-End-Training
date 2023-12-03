@@ -4,10 +4,14 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    include ./pug/layout/style
+    include ./pug/layout/styles
     title #{pageTitle}
   body
     .page.home-page
       include ./pug/layout/sidebar
       .content-aria
-        h1 #{pageTitle}
+        include ./pug/layout/header
+        .content
+          h1 #{pageTitle}
+
+    include ./pug/layout/scripts

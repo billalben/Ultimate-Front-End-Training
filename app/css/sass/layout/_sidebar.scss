@@ -7,6 +7,10 @@
     height: 100%;
     background-color: #eee;
     padding: 1rem;
-    transition: 0.3s;
+    transition: left 0.3s;
+
+    &.no-sidebar {
+      left: -250px;
+    }
   }
 }
