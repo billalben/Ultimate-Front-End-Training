@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+// body {
+// }
+
+.page {
+  min-height: 100vh;
+
+  .content-aria {
+    width: calc(100% - 250px);
+    min-height: 100%;
+    transition: width 0.3s;
+    float: right;
+  }
+}
