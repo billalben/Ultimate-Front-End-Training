@@ -12,9 +12,10 @@
 
   .content-aria {
     width: calc(100% - 250px);
-    min-height: 100%;
+    min-height: 100vh;
     transition: width 0.3s;
     float: right;
+    background-color: #f2f1f6;
 
     &.no-sidebar {
       width: 100%;
