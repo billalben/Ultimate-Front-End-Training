@@ -3,14 +3,20 @@
   ul.links-area.list-unstyled
     li: a(href="#") Homepage
     li
-      a(href="#") Forms
+      a(href="#")
+        .drop-menu
+          | Forms
+          i.fa.fa-angle-right.toggle-submenu
       ul.child-links.list-unstyled
         li: a(href="#") Input
         li: a(href="#") Textarea
         li: a(href="#") Checkbox
         li: a(href="#") Radio
     li
-      a(href="#") Misc
+      a(href="#")
+        .drop-menu
+          | Misc
+          i.fa.fa-angle-right.toggle-submenu
       ul.child-links.list-unstyled
         li: a(href="#") Loading
         li: a(href="#") Breadcrumbs
