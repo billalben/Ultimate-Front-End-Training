@@ -21,18 +21,26 @@
     }
 
     .links-area {
+      // All Links
       li {
         a {
           display: block;
           position: relative;
-          color: #fff;
-          padding: 0.625rem;
+          color: #ccc;
+          padding: 10px 20px;
+          transition: padding .3s, color .4s;
+
+          &:hover {
+            color: #fff;
+          }
         }
       }
 
+      // Main Links
       > li > a {
         position: relative;
-        padding-left: 20px;
+        color: #fff;
+        font-size: 1.15rem;
 
         &::before {
           content: "";
@@ -44,6 +52,38 @@
           border-radius: 50%;
           border: 2px solid #fff;
           transform: translateY(-50%);
+          transition: background-color .3s;
+        }
+
+        &:hover {
+          padding-left: 25px;
+        }
+
+        &:hover::before {
+          background-color: #fff;
+        }
+      }
+
+      .child-links {
+        position: relative;
+
+        a {
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 3px;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background-color: #666;
+            transition: background-color .3s;
+          }
+
+          &:hover::before {
+            background-color: #fff;
+          }
         }
       }
     }

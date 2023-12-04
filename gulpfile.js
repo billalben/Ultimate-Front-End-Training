@@ -43,7 +43,7 @@ function jsTask() {
 function browserSyncServe(cb) {
   browsersync.init({
     server: {
-      baseDir: ".",
+      baseDir: "./dist/",
     },
     notify: {
       styles: {
@@ -63,7 +63,7 @@ function browserSyncReload(cb) {
 function watchTask() {
   watch("./dist/*.html", browserSyncReload);
   watch(
-    ["./app/html/**/*.pug", "./app/*.scss", "./app/js/*.js"],
+    ["./app/html/**/*.pug", "./app/css/**/*.scss", "./app/js/*.js"],
     series(htmlTask, scssTask, jsTask, browserSyncReload)
   );
 }
