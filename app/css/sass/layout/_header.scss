@@ -1,8 +1,28 @@
 .header {
   background-color: #fff;
-  padding: 1rem;
+  padding: 1.25rem;
 
   .toggle-sidebar {
     cursor: pointer;
+  }
+
+  .notifications-container {
+    display: inline-block;
+    margin-left: 20px;
+
+    i.toggle-notifications {
+      background-color: #f9f9f9;
+      padding: 0.625rem;
+      border-radius: 50%;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      // min-width: 600px;
+      padding: .625rem;
+      border: none;
+      box-shadow: 0 0 10px #ddd;
+    }
   }
 }
