@@ -3,4 +3,21 @@
   .dropdown.notifications-container
     i.fa.fa-bell.fa-lg.toggle-notifications(data-bs-toggle='dropdown' aria-expanded='false')
     ul.dropdown-menu
-      | Notifications
+      .noti-head
+        | Notifications 
+        span 50
+      .noti-content
+        ul.list-unstyled
+          li
+            i.fa.fa-envelope.fa-lg
+            | You Got Email From bla bla bla
+          li
+            i.fa.fa-money-bill.fa-lg
+            | You Got Money From bla bla bla
+          li
+            i.fa.fa-thumbs-up.fa-lg
+            | You Got Like From bla bla bla
+          li
+            i.fa.fa-envelope.fa-lg
+            | You Got Email From bla bla bla
+      .noti-footer.text-center: a(href="#") View All Notifications
