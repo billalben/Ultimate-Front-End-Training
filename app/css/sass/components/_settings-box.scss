@@ -1,0 +1,55 @@
+.settings-box {
+  position: fixed;
+  right: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 100;
+  padding: 1.25rem;
+  transition: right 0.4s;
+
+  .option-title {
+    font-weight: bold;
+    color: #666;
+    margin: 0.625rem 0 1rem;
+  }
+
+  .toggle-settings {
+    position: absolute;
+    background-color: #fff;
+    top: 100px;
+    left: -40px;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.25rem 0 0 0.25rem;
+    cursor: pointer;
+  }
+
+  &.show-settings-box {
+    right: 0px;
+  }
+
+  .color-options {
+    ul {
+      $colors: #27ae60, #2980b9, #c0392b, #d35400, #8e44ad;
+      @for $i from 1 through length($colors) {
+        li:nth-child(#{$i}) {
+          background-color: nth($colors, $i);
+        }
+      }
+
+      li {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        opacity: 0.7;
+        cursor: pointer;
+        display: inline-block;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

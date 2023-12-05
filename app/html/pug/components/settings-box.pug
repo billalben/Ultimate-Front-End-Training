@@ -2,9 +2,13 @@
   .toggle-settings
     i.fa.fa-gear.fa-lg
   .settings-content
+    .option-box.color-options.text-center
+      h4.option-title Color Options
+      - const themes = ["green-theme", "blue-theme", "red-theme", "orange-theme", "purple-theme"]
+      ul.list-unstyled
+        each theme in themes
+          li(data-theme=theme)
     .option-box
-      h4 Color Options
+      h4.option-title Font Options
     .option-box
-      h4 Font Options
-    .option-box
-      h4 Sidebar Options
+      h4.option-title Sidebar Options

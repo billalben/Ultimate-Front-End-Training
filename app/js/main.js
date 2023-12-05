@@ -34,3 +34,26 @@ toggleSettings.addEventListener("click", function () {
   this.firstElementChild.classList.toggle("fa-spin");
   this.parentElement.classList.toggle("show-settings-box");
 });
+
+// ---------------------------------------
+// switch color themes
+
+const colorOptions = document.querySelectorAll(".color-options li");
+const themesClasses = [];
+
+colorOptions.forEach((colorOption) => {
+  themesClasses.push(colorOption.getAttribute("data-theme"));
+});
+
+colorOptions.forEach((colorOption) => {
+  colorOption.addEventListener("click", function () {
+    //
+    colorOptions.forEach( (colorOption) => {
+      colorOption.classList.remove("active");
+    });
+    colorOption.classList.add("active");
+
+    document.body.classList.remove(...themesClasses);
+    document.body.classList.add(this.getAttribute("data-theme"));
+  });
+});
