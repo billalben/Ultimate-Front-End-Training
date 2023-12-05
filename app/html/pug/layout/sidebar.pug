@@ -1,7 +1,7 @@
 .sidebar
   .logo-area.text-center Billal
   ul.links-area.list-unstyled
-    li: a(href="#") Homepage
+    li: a(href="./index.html", class= pageTitle === "Homepage" ? "active" : "") Homepage
     li
       a(href="#")
         .drop-menu
@@ -20,3 +20,4 @@
       ul.child-links.list-unstyled
         li: a(href="#") Loading
         li: a(href="#") Breadcrumbs
+    li: a(href="./charts.html", class= pageTitle === "Charts" ? "active" : "") Charts

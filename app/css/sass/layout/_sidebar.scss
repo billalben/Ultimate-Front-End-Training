@@ -28,7 +28,7 @@
           position: relative;
           color: #ccc;
           padding: 10px 20px;
-          transition: padding .3s, color .4s;
+          transition: padding 0.3s, color 0.4s;
 
           &:hover {
             color: #fff;
@@ -52,14 +52,15 @@
           border-radius: 50%;
           border: 2px solid #fff;
           transform: translateY(-50%);
-          transition: background-color .3s;
+          transition: background-color 0.3s;
         }
 
         &:hover {
           padding-left: 25px;
         }
 
-        &:hover::before {
+        &:hover::before,
+        &.active::before {
           background-color: #fff;
         }
       }
@@ -71,9 +72,9 @@
 
         .toggle-submenu {
           transform: rotate(0deg);
-          transition: transform .3s;
+          transition: transform 0.3s;
         }
-        
+
         .toggle-submenu.down {
           transform: rotate(90deg);
         }
@@ -97,7 +98,7 @@
             width: 3px;
             height: 100%;
             background-color: #666;
-            transition: background-color .3s;
+            transition: background-color 0.3s;
           }
 
           &:hover::before {
