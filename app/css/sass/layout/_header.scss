@@ -11,11 +11,20 @@
     border-radius: 50%;
     color: #555;
     cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #27ae60;
+    }
   }
 
   .toggle-sidebar {
     cursor: pointer;
     transition: color 0.3s;
+
+    &:hover {
+      color: #27ae60;
+    }
   }
 
   .notifications-container {
@@ -114,6 +123,7 @@
         h3 {
           font-weight: bold;
           font-size: 1.25rem;
+          color: #27ae60;
         }
 
         p {

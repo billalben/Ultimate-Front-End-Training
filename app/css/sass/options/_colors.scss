@@ -22,9 +22,23 @@ $themes: (
     .page .page-head .page-title {
       color: $color;
     }
+
+    // .page .sidebar .logo-area {
+    //   color: $color;
+    // }
+
+    .page .sidebar .links-area .child-links a:hover:before {
+      background-color: $color;
+    }
+
+    .header .header-icon:hover {
+      color: $color;
+    }
+
     .header .toggle-sidebar:hover {
       color: $color;
     }
+
     .header .usermenu-container .dropdown-menu .user-info h3 {
       color: $color;
     }
