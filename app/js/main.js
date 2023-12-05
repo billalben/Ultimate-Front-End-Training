@@ -48,7 +48,7 @@ colorOptions.forEach((colorOption) => {
 colorOptions.forEach((colorOption) => {
   colorOption.addEventListener("click", function () {
     //
-    colorOptions.forEach( (colorOption) => {
+    colorOptions.forEach((colorOption) => {
       colorOption.classList.remove("active");
     });
     colorOption.classList.add("active");
@@ -56,4 +56,22 @@ colorOptions.forEach((colorOption) => {
     document.body.classList.remove(...themesClasses);
     document.body.classList.add(this.getAttribute("data-theme"));
   });
+});
+
+// ---------------------------------------
+// switch color themes
+
+const fontClasses = [];
+const fontOptions = document.querySelectorAll(".font-options select option");
+
+fontOptions.forEach(function (fontOption) {
+  fontClasses.push(fontOption.value);
+});
+
+const fontSelect = document.querySelector(".font-options select");
+
+fontSelect.addEventListener("change", function () {
+  document.body.classList.remove(...fontClasses);
+
+  document.body.classList.add(this.value);
 });
