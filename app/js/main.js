@@ -25,38 +25,12 @@ dropMenus.forEach((dropMenu) => {
   });
 });
 
-// ------------------------------
-/* Get the documentElement (<html>) to display the page in fullscreen */
-const openCloseFullscreen = document.querySelector(".toggle-fullscreen");
+// ---------------------------------------
+// toggle settings
 
-openCloseFullscreen.addEventListener("click", function () {
-  this.classList.toggle("full-screen");
+const toggleSettings = document.querySelector(".toggle-settings");
 
-  if (this.classList.contains("full-screen")) {
-    openFullscreen();
-  } else {
-    closeFullscreen();
-  }
+toggleSettings.addEventListener("click", function () {
+  this.firstElementChild.classList.toggle("fa-spin");
+  this.parentElement.classList.toggle("show-settings-box");
 });
-
-const elem = document.documentElement;
-
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) {
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    elem.msRequestFullscreen();
-  }
-}
-
-function closeFullscreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.webkitExitFullscreen) {
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) {
-    document.msExitFullscreen();
-  }
-}

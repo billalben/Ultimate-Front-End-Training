@@ -32,7 +32,7 @@ function scssTask() {
 
 // js Task
 function jsTask() {
-  return src("./app/js/*.js", { sourcemaps: true })
+  return src(["./app/js/main.js", "./app/js/fullScreen.js"], { sourcemaps: true })
     .pipe(babel({ presets: ["@babel/preset-env"] }))
     .pipe(concat("main.min.js"))
     .pipe(terser())
