@@ -114,3 +114,62 @@
     }
   }
 }
+
+@media (max-width: 578px) {
+  .page {
+    .sidebar {
+      width: 180px;
+
+      &.no-sidebar {
+        left: -150px;
+      }
+
+      .logo-area {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .links-area {
+        // Main Links
+        > li > a {
+          position: relative;
+          color: #fff;
+          font-size: 0.925rem;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 6px;
+            width: 6px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+          }
+
+          &:hover {
+            padding-left: 22px;
+          }
+        }
+
+        .child-links {
+          a {
+            &::before {
+              content: "";
+              left: 3px;
+              top: 0;
+              width: 2px;
+              background-color: #666;
+            }
+          }
+        }
+
+        .child-links.open {
+          max-height: 218px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
